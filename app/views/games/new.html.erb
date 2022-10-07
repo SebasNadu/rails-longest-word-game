@@ -1,12 +1,15 @@
-<h1 class='fs-1'>New game</h1>
-<ul class='list-group flex-row justify-content-between'>
+<h1 class='fs-1 text-white'>New game</h1>
+
+<ul class='list-group flex-row'>
   <% @letters.each do |letter| %> 
-    <li class='list-group-item h2 bg-info text-white p-3 m-2 shadow rounded text-center' style="width: 5rem;"><%= letter %></li>
+    <li class='list-group-item h2 bg-info text-white p-2 m-2 shadow rounded text-center' style="width: 5vw;"><%= letter %></li>
   <% end %> 
 </ul>
-<p class="fs-3">What is the longest word you can find?</p>
+
+<p class="fs-3 text-white">What is the longest word you can find?</p>
+
 <form action="score" method="post" class="input-group mb-3" data-turbo="false">
-  <input type="text" class="form-control" placeholder="word" name="word">
-  <button class="btn btn-outline-secondary" type="submit">Play!</button>
+  <input type="text" class="form-control shadow-lg" placeholder="word" name="word" aria-describedby="button2">
+  <button class="btn btn-outline-info text-white border-3 shadow-lg" type="submit" id="button2">Play!</button>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>

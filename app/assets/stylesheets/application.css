@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+body {
+	width: 100vw;
+	height: 100vh;
+	background: radial-gradient(ellipse at top, #bb3e03, #1a1100),
+            radial-gradient(ellipse at bottom, #0a9396, #000);
+	backdrop-filter: blur(100px);
+}
+.container {
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	height: 35vh;
+}
